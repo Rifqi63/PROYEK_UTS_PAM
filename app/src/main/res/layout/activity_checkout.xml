@@ -1,0 +1,300 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FAF6F0"
+    android:fillViewport="true">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="20dp">
+
+        <!-- Header -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:paddingBottom="22dp">
+
+            <TextView
+                android:id="@+id/btnCheckoutBack"
+                android:layout_width="42dp"
+                android:layout_height="42dp"
+                android:background="#EFE5D8"
+                android:gravity="center"
+                android:text="‹"
+                android:textColor="#543B2B"
+                android:textSize="30sp"
+                android:clickable="true"
+                android:focusable="true" />
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="vertical"
+                android:paddingStart="14dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Checkout"
+                    android:textColor="#3D2B20"
+                    android:textSize="23sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Selesaikan pesananmu"
+                    android:textColor="#9A8777"
+                    android:textSize="12sp" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <!-- Delivery Address -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Alamat Pengiriman"
+            android:textColor="#3D2B20"
+            android:textSize="17sp"
+            android:textStyle="bold"
+            android:layout_marginBottom="12dp" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:background="#FFFFFF"
+            android:padding="16dp"
+            android:elevation="2dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Nama Lengkap"
+                android:textColor="#6F5A49"
+                android:textSize="13sp" />
+
+            <EditText
+                android:id="@+id/etCustomerName"
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:hint="Masukkan nama lengkap"
+                android:textColor="#3D2B20"
+                android:textColorHint="#B6A99D"
+                android:textSize="14sp"
+                android:singleLine="true"
+                android:inputType="textPersonName"
+                android:backgroundTint="#B99B7D" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Nomor Telepon"
+                android:textColor="#6F5A49"
+                android:textSize="13sp"
+                android:layout_marginTop="12dp" />
+
+            <EditText
+                android:id="@+id/etCustomerPhone"
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:hint="08xxxxxxxxxx"
+                android:textColor="#3D2B20"
+                android:textColorHint="#B6A99D"
+                android:textSize="14sp"
+                android:singleLine="true"
+                android:inputType="phone"
+                android:backgroundTint="#B99B7D" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Alamat Lengkap"
+                android:textColor="#6F5A49"
+                android:textSize="13sp"
+                android:layout_marginTop="12dp" />
+
+            <EditText
+                android:id="@+id/etCustomerAddress"
+                android:layout_width="match_parent"
+                android:layout_height="90dp"
+                android:hint="Masukkan alamat pengiriman"
+                android:textColor="#3D2B20"
+                android:textColorHint="#B6A99D"
+                android:textSize="14sp"
+                android:gravity="top"
+                android:inputType="textMultiLine"
+                android:backgroundTint="#B99B7D" />
+
+        </LinearLayout>
+
+        <!-- Payment Method -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Metode Pembayaran"
+            android:textColor="#3D2B20"
+            android:textSize="17sp"
+            android:textStyle="bold"
+            android:layout_marginTop="24dp"
+            android:layout_marginBottom="12dp" />
+
+        <RadioGroup
+            android:id="@+id/rgPaymentMethod"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:background="#FFFFFF"
+            android:padding="16dp">
+
+            <RadioButton
+                android:id="@+id/rbCOD"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Bayar di Tempat (COD)"
+                android:textColor="#543B2B"
+                android:buttonTint="#8B6246"
+                android:checked="true" />
+
+            <RadioButton
+                android:id="@+id/rbTransfer"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Transfer Bank (Demo)"
+                android:textColor="#543B2B"
+                android:buttonTint="#8B6246" />
+
+            <RadioButton
+                android:id="@+id/rbEwallet"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="E-Wallet (Demo)"
+                android:textColor="#543B2B"
+                android:buttonTint="#8B6246" />
+
+        </RadioGroup>
+
+        <!-- Order Summary -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Ringkasan Pembayaran"
+            android:textColor="#3D2B20"
+            android:textSize="17sp"
+            android:textStyle="bold"
+            android:layout_marginTop="24dp"
+            android:layout_marginBottom="12dp" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:background="#FFFFFF"
+            android:padding="16dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Subtotal Produk"
+                    android:textColor="#806F60"
+                    android:textSize="14sp" />
+
+                <TextView
+                    android:id="@+id/tvCheckoutSubtotal"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Rp0"
+                    android:textColor="#543B2B"
+                    android:textSize="14sp" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginTop="12dp">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Ongkos Kirim"
+                    android:textColor="#806F60"
+                    android:textSize="14sp" />
+
+                <TextView
+                    android:id="@+id/tvCheckoutShipping"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Rp5.000"
+                    android:textColor="#543B2B"
+                    android:textSize="14sp" />
+
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="#E9DED2"
+                android:layout_marginTop="16dp"
+                android:layout_marginBottom="16dp" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Total Pembayaran"
+                    android:textColor="#3D2B20"
+                    android:textSize="15sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/tvCheckoutTotal"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Rp5.000"
+                    android:textColor="#8B6246"
+                    android:textSize="18sp"
+                    android:textStyle="bold" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <!-- Place Order -->
+        <Button
+            android:id="@+id/btnPlaceOrder"
+            android:layout_width="match_parent"
+            android:layout_height="56dp"
+            android:layout_marginTop="24dp"
+            android:layout_marginBottom="20dp"
+            android:backgroundTint="#795239"
+            android:text="Buat Pesanan"
+            android:textAllCaps="false"
+            android:textColor="#FFFFFF"
+            android:textSize="16sp"
+            android:textStyle="bold" />
+
+    </LinearLayout>
+
+</ScrollView>

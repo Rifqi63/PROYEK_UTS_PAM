@@ -1,0 +1,690 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="#FAF6F0">
+
+    <ScrollView
+        android:id="@+id/homeScroll"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:fillViewport="true"
+        android:clipToPadding="false">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="20dp">
+
+            <!-- HEADER -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="KOPI DAN NYEMIL"
+                        android:textColor="#A66A35"
+                        android:textSize="11sp"
+                        android:textStyle="bold"
+                        android:letterSpacing="0.15"/>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="4dp"
+                        android:text="Good Coffee, Good Mood."
+                        android:textColor="#38251C"
+                        android:textSize="20sp"
+                        android:textStyle="bold"/>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="5dp"
+                        android:text="☼ Bandung, Indonesia"
+                        android:textColor="#927967"
+                        android:textSize="12sp"/>
+                </LinearLayout>
+
+                <TextView
+                    android:id="@+id/tvProfile"
+                    android:layout_width="48dp"
+                    android:layout_height="48dp"
+                    android:background="@drawable/bg_primary_button"
+                    android:gravity="center"
+                    android:text="♙"
+                    android:textColor="#FFFFFF"
+                    android:textSize="25sp"
+                    android:elevation="3dp"/>
+            </LinearLayout>
+
+            <!-- GREETING -->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="28dp"
+                android:text="Find your perfect coffee"
+                android:textColor="#38251C"
+                android:textSize="23sp"
+                android:textStyle="bold"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="6dp"
+                android:text="Temukan rasa favorit untuk menemani harimu."
+                android:textColor="#927967"
+                android:textSize="13sp"/>
+
+            <!-- SEARCH -->
+            <EditText
+                android:id="@+id/etSearch"
+                android:layout_width="match_parent"
+                android:layout_height="52dp"
+                android:layout_marginTop="20dp"
+                android:background="@drawable/bg_home_search"
+                android:drawableStart="@android:drawable/ic_menu_search"
+                android:drawablePadding="12dp"
+                android:hint="Cari kopi atau makanan..."
+                android:paddingStart="16dp"
+                android:paddingEnd="16dp"
+                android:singleLine="true"
+                android:inputType="text"
+                android:textColor="#38251C"
+                android:textColorHint="#A99787"
+                android:textSize="14sp"/>
+
+            <!-- PROMOTION BANNER -->
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="175dp"
+                android:layout_marginTop="22dp"
+                android:background="@drawable/bg_home_card"
+                android:clipToOutline="true"
+                android:elevation="3dp">
+
+                <ImageView
+                    android:id="@+id/ivBanner"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:contentDescription="Coffee promotion"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/coffee_banner"/>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical"
+                    android:gravity="center_vertical"
+                    android:padding="20dp"
+                    android:background="#77301B12">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="SPECIAL FOR YOU"
+                        android:textColor="#F5D6A5"
+                        android:textSize="10sp"
+                        android:textStyle="bold"
+                        android:letterSpacing="0.15"/>
+
+                    <TextView
+                        android:layout_width="230dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="8dp"
+                        android:text="A Little Coffee,\nA Lot of Happiness."
+                        android:textColor="#FFFFFF"
+                        android:textSize="22sp"
+                        android:textStyle="bold"/>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="8dp"
+                        android:text="Make your day more special."
+                        android:textColor="#F5E9DD"
+                        android:textSize="12sp"/>
+                </LinearLayout>
+            </FrameLayout>
+
+            <!-- CATEGORY HEADER -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="28dp"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Explore Category"
+                    android:textColor="#38251C"
+                    android:textSize="19sp"
+                    android:textStyle="bold"/>
+
+                <TextView
+                    android:id="@+id/tvOurMenu"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Our Menu"
+                    android:textColor="#A66A35"
+                    android:textSize="12sp"
+                    android:textStyle="bold"
+                    android:clickable="true"
+                    android:focusable="true"/>
+            </LinearLayout>
+
+            <!-- CATEGORY CHIPS -->
+            <HorizontalScrollView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="14dp"
+                android:scrollbars="none">
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/btnCategoryCoffee"
+                        android:layout_width="wrap_content"
+                        android:layout_height="42dp"
+                        android:background="@drawable/bg_primary_button"
+                        android:gravity="center"
+                        android:paddingStart="22dp"
+                        android:paddingEnd="22dp"
+                        android:text="☕ Coffee"
+                        android:textColor="#FFFFFF"
+                        android:textSize="13sp"
+                        android:textStyle="bold"
+                        android:clickable="true"
+                        android:focusable="true"/>
+
+                    <TextView
+                        android:id="@+id/btnCategorySnacks"
+                        android:layout_width="wrap_content"
+                        android:layout_height="42dp"
+                        android:layout_marginStart="10dp"
+                        android:background="@drawable/bg_home_chip"
+                        android:gravity="center"
+                        android:paddingStart="22dp"
+                        android:paddingEnd="22dp"
+                        android:text="🥐 Snacks"
+                        android:textColor="#5D4033"
+                        android:textSize="13sp"
+                        android:clickable="true"
+                        android:focusable="true"/>
+
+                    <TextView
+                        android:id="@+id/btnCategoryDrinks"
+                        android:layout_width="wrap_content"
+                        android:layout_height="42dp"
+                        android:layout_marginStart="10dp"
+                        android:background="@drawable/bg_home_chip"
+                        android:gravity="center"
+                        android:paddingStart="22dp"
+                        android:paddingEnd="22dp"
+                        android:text="🧋 Drinks"
+                        android:textColor="#5D4033"
+                        android:textSize="13sp"
+                        android:clickable="true"
+                        android:focusable="true"/>
+                </LinearLayout>
+            </HorizontalScrollView>
+
+            <!-- PRODUCT HEADER -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="28dp"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Popular Menu"
+                    android:textColor="#38251C"
+                    android:textSize="19sp"
+                    android:textStyle="bold"/>
+
+                <TextView
+                    android:id="@+id/tvProductCount"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="5 Products"
+                    android:textColor="#A68E7C"
+                    android:textSize="12sp"/>
+            </LinearLayout>
+
+            <!-- PRODUCT ROW 1 -->
+            <LinearLayout
+                android:id="@+id/rowProducts1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15dp"
+                android:orientation="horizontal">
+
+                <!-- CARAMEL LATTE -->
+                <LinearLayout
+                    android:id="@+id/cardCaramel"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:layout_marginEnd="8dp"
+                    android:background="@drawable/bg_home_card"
+                    android:orientation="vertical"
+                    android:elevation="2dp"
+                    android:clickable="true"
+                    android:focusable="true">
+
+                    <ImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="135dp"
+                        android:contentDescription="Caramel Latte"
+                        android:scaleType="centerCrop"
+                        android:src="@drawable/caramel_latte"/>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:padding="11dp">
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="Caramel Latte"
+                            android:textColor="#38251C"
+                            android:textSize="14sp"
+                            android:textStyle="bold"/>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="7dp"
+                            android:gravity="center_vertical"
+                            android:orientation="horizontal">
+
+                            <TextView
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:text="Rp 25.000"
+                                android:textColor="#A66A35"
+                                android:textSize="13sp"
+                                android:textStyle="bold"/>
+
+                            <TextView
+                                android:id="@+id/btnFavoriteCaramel"
+                                android:layout_width="35dp"
+                                android:layout_height="35dp"
+                                android:gravity="center"
+                                android:text="♡"
+                                android:textColor="#B65B45"
+                                android:textSize="25sp"
+                                android:clickable="true"
+                                android:focusable="true"
+                                android:contentDescription="Favorite Caramel Latte"/>
+                        </LinearLayout>
+                    </LinearLayout>
+                </LinearLayout>
+
+                <!-- ICE AMERICANO -->
+                <LinearLayout
+                    android:id="@+id/cardAmericano"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:layout_marginStart="8dp"
+                    android:background="@drawable/bg_home_card"
+                    android:orientation="vertical"
+                    android:elevation="2dp"
+                    android:clickable="true"
+                    android:focusable="true">
+
+                    <ImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="135dp"
+                        android:contentDescription="Ice Americano"
+                        android:scaleType="centerCrop"
+                        android:src="@drawable/ice_americano"/>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:padding="11dp">
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="Ice Americano"
+                            android:textColor="#38251C"
+                            android:textSize="14sp"
+                            android:textStyle="bold"/>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="7dp"
+                            android:gravity="center_vertical"
+                            android:orientation="horizontal">
+
+                            <TextView
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:text="Rp 20.000"
+                                android:textColor="#A66A35"
+                                android:textSize="13sp"
+                                android:textStyle="bold"/>
+
+                            <TextView
+                                android:id="@+id/btnFavoriteAmericano"
+                                android:layout_width="35dp"
+                                android:layout_height="35dp"
+                                android:gravity="center"
+                                android:text="♡"
+                                android:textColor="#B65B45"
+                                android:textSize="25sp"
+                                android:clickable="true"
+                                android:focusable="true"
+                                android:contentDescription="Favorite Ice Americano"/>
+                        </LinearLayout>
+                    </LinearLayout>
+                </LinearLayout>
+            </LinearLayout>
+
+            <!-- PRODUCT ROW 2 -->
+            <LinearLayout
+                android:id="@+id/rowProducts2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15dp"
+                android:orientation="horizontal">
+
+                <!-- MATCHA LATTE -->
+                <LinearLayout
+                    android:id="@+id/cardMatcha"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:layout_marginEnd="8dp"
+                    android:background="@drawable/bg_home_card"
+                    android:orientation="vertical"
+                    android:elevation="2dp"
+                    android:clickable="true"
+                    android:focusable="true">
+
+                    <ImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="135dp"
+                        android:contentDescription="Matcha Latte"
+                        android:scaleType="centerCrop"
+                        android:src="@drawable/matcha_latte"/>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:padding="11dp">
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="Matcha Latte"
+                            android:textColor="#38251C"
+                            android:textSize="14sp"
+                            android:textStyle="bold"/>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="7dp"
+                            android:gravity="center_vertical"
+                            android:orientation="horizontal">
+
+                            <TextView
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:text="Rp 23.000"
+                                android:textColor="#A66A35"
+                                android:textSize="13sp"
+                                android:textStyle="bold"/>
+
+                            <TextView
+                                android:id="@+id/btnFavoriteMatcha"
+                                android:layout_width="35dp"
+                                android:layout_height="35dp"
+                                android:gravity="center"
+                                android:text="♡"
+                                android:textColor="#B65B45"
+                                android:textSize="25sp"
+                                android:clickable="true"
+                                android:focusable="true"
+                                android:contentDescription="Favorite Matcha Latte"/>
+                        </LinearLayout>
+                    </LinearLayout>
+                </LinearLayout>
+
+                <!-- BUTTER CROISSANT -->
+                <LinearLayout
+                    android:id="@+id/cardCroissant"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:layout_marginStart="8dp"
+                    android:background="@drawable/bg_home_card"
+                    android:orientation="vertical"
+                    android:elevation="2dp"
+                    android:clickable="true"
+                    android:focusable="true">
+
+                    <ImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="135dp"
+                        android:contentDescription="Butter Croissant"
+                        android:scaleType="centerCrop"
+                        android:src="@drawable/butter_croissant"/>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:padding="11dp">
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="Butter Croissant"
+                            android:textColor="#38251C"
+                            android:textSize="14sp"
+                            android:textStyle="bold"/>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="7dp"
+                            android:gravity="center_vertical"
+                            android:orientation="horizontal">
+
+                            <TextView
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:text="Rp 18.000"
+                                android:textColor="#A66A35"
+                                android:textSize="13sp"
+                                android:textStyle="bold"/>
+
+                            <TextView
+                                android:id="@+id/btnFavoriteCroissant"
+                                android:layout_width="35dp"
+                                android:layout_height="35dp"
+                                android:gravity="center"
+                                android:text="♡"
+                                android:textColor="#B65B45"
+                                android:textSize="25sp"
+                                android:clickable="true"
+                                android:focusable="true"
+                                android:contentDescription="Favorite Butter Croissant"/>
+                        </LinearLayout>
+                    </LinearLayout>
+                </LinearLayout>
+            </LinearLayout>
+
+            <!-- PRODUCT ROW 3 -->
+            <LinearLayout
+                android:id="@+id/rowProducts3"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15dp"
+                android:layout_marginBottom="25dp"
+                android:orientation="horizontal">
+
+                <!-- CHOCOLATE DONUT -->
+                <LinearLayout
+                    android:id="@+id/cardDonut"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:layout_marginEnd="8dp"
+                    android:background="@drawable/bg_home_card"
+                    android:orientation="vertical"
+                    android:elevation="2dp"
+                    android:clickable="true"
+                    android:focusable="true">
+
+                    <ImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="135dp"
+                        android:contentDescription="Chocolate Donut"
+                        android:scaleType="centerCrop"
+                        android:src="@drawable/chocolate_donut"/>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:padding="11dp">
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="Chocolate Donut"
+                            android:textColor="#38251C"
+                            android:textSize="14sp"
+                            android:textStyle="bold"/>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="7dp"
+                            android:gravity="center_vertical"
+                            android:orientation="horizontal">
+
+                            <TextView
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:text="Rp 12.000"
+                                android:textColor="#A66A35"
+                                android:textSize="13sp"
+                                android:textStyle="bold"/>
+
+                            <TextView
+                                android:id="@+id/btnFavoriteDonut"
+                                android:layout_width="35dp"
+                                android:layout_height="35dp"
+                                android:gravity="center"
+                                android:text="♡"
+                                android:textColor="#B65B45"
+                                android:textSize="25sp"
+                                android:clickable="true"
+                                android:focusable="true"
+                                android:contentDescription="Favorite Chocolate Donut"/>
+                        </LinearLayout>
+                    </LinearLayout>
+                </LinearLayout>
+
+                <View
+                    android:layout_width="0dp"
+                    android:layout_height="1dp"
+                    android:layout_weight="1"
+                    android:layout_marginStart="8dp"/>
+            </LinearLayout>
+
+        </LinearLayout>
+    </ScrollView>
+
+    <!-- BOTTOM NAVIGATION -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="68dp"
+        android:background="@drawable/bg_home_nav"
+        android:elevation="10dp"
+        android:gravity="center"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/navHome"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="⌂\nHome"
+            android:textColor="#6B351B"
+            android:textSize="13sp"
+            android:textStyle="bold"/>
+
+        <TextView
+            android:id="@+id/navFavorite"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="♡\nFavorite"
+            android:textColor="#96745F"
+            android:textSize="13sp"/>
+
+        <TextView
+            android:id="@+id/navOrders"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="▢\nOrders"
+            android:textColor="#96745F"
+            android:textSize="13sp"/>
+
+        <TextView
+            android:id="@+id/navProfile"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="♙\nProfile"
+            android:textColor="#96745F"
+            android:textSize="13sp"/>
+    </LinearLayout>
+
+</LinearLayout>
